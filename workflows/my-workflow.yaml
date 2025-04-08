@@ -10,4 +10,5 @@ spec:
         image: python:3.8
         command: ["python"]
         source: |
-          print("Processing data...")
+          with open("/scripts/process-data.py") as f:
+              exec(f.read())
